@@ -39,7 +39,7 @@ export default function Home() {
       max_tokens: 3500,
       top_p: 1,
       frequency_penalty: 0,
-      presence_penalty: 0,
+      presence_penalty: 0
     });
     console.log(responseThought.data.choices[0].message.content);
     setThought(responseThought.data.choices[0].message.content);
@@ -68,7 +68,7 @@ export default function Home() {
       max_tokens: 3500,
       top_p: 1,
       frequency_penalty: 0,
-      presence_penalty: 0,
+      presence_penalty: 0
     });
     console.log(responseMiddle.data.choices[0].message.content);
     setMiddle(responseMiddle.data.choices[0].message.content);
@@ -98,14 +98,14 @@ export default function Home() {
         },
         {
           "role": "user",
-          "content": "print the final song"
+          "content": "Using your previous response, print only the song lyrics you generated."
         }
       ],
-      temperature: 1.2,
+      temperature: 1.0,
       max_tokens: 3500,
       top_p: 1,
       frequency_penalty: 0,
-      presence_penalty: 0,
+      presence_penalty: 0
     });
     console.log(responseLyrics.data.choices[0].message.content);
     setLyrics(responseLyrics.data.choices[0].message.content);
