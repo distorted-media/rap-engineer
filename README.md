@@ -1,32 +1,13 @@
-# Joy UI - Next.js App Router with TypeScript
+# Rap Engineer
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
-
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/joy-ui-nextjs-ts
-cd joy-ui-nextjs-ts
-```
+Using [Joy UI Component Libray](https://mui.com/joy-ui/getting-started/)
 
 Install dependencies and run:
 
 ```bash
-# npm
-npm install
-npm run dev
-
 # yarn
 yarn
 yarn dev
-
-# pnpm
-pnpm install
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your web browser to see the result.
