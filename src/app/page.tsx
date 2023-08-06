@@ -7,6 +7,7 @@ import InputBox from '@/components/InputBox';
 import ThoughtCard from '@/components/ThoughtCard';
 import LyricsCard from '@/components/LyricsCard';
 import Chip from '@/components/chip';
+import PromptCard from '@/components/PromptCard';
 
 const configuration = new Configuration({
   apiKey: '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',
@@ -15,7 +16,7 @@ const openai = new OpenAIApi(configuration);
 
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState('');
+  const [prompt, setInputValue] = useState('');
   const [thought, setThought] = useState('');
   const [middle, setMiddle] = useState('');
   const [lyrics, setLyrics] = useState('');
@@ -32,7 +33,7 @@ export default function Home() {
         },
         {
           "role": "user",
-          "content": inputValue
+          "content": prompt
         }
       ],
       temperature: 1.2,
@@ -53,7 +54,7 @@ export default function Home() {
         },
         {
           "role": "user",
-          "content": inputValue
+          "content": prompt
         },
         {
           "role": "assistant",
@@ -82,7 +83,7 @@ export default function Home() {
         },
         {
           "role": "user",
-          "content": inputValue
+          "content": prompt
         },
         {
           "role": "assistant",
@@ -123,6 +124,7 @@ export default function Home() {
     >
       <Chip/>
       {showInputBox && <InputBox onGenerate={handleGenerate} onChange={setInputValue} />}
+      {!showInputBox && <PromptCard prompt={prompt}/>}
       {!showInputBox && <ThoughtCard thought={thought} />}
       {thought && <LyricsCard lyrics={lyrics}/>}
     </Sheet>
