@@ -23,7 +23,7 @@ export default function Home() {
       }}
     >
       <InputBox/>
-      <ThoughtCard/>
+      <ThoughtCard thought="This is a thought"/>
       <LyricsCard />
     </Sheet>
   );
