@@ -10,7 +10,7 @@ export default function ThoughtCard(props) {
   return (
     <Sheet
     sx={{
-        width: 300,
+        width: 900,
         mx: 'auto',
         my: 4,
         py: 3,
