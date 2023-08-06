@@ -8,19 +8,23 @@ import Button from '@mui/joy/Button';
 import Link from '@mui/joy/Link';
 
 import InputBox from '@/components/InputBox';
+import ThoughtCard from '@/components/ThoughtCard';
+import LyricsCard from '@/components/LyricsCard';
 
 export default function Home() {
   return (
     <Sheet
       sx={{
         display: 'flex',
-        flexFlow: 'row nowrap',
+        flexFlow: 'column nowrap',
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh',
       }}
     >
       <InputBox/>
+      <ThoughtCard/>
+      <LyricsCard />
     </Sheet>
   );
 }
