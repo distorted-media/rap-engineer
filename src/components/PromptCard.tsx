@@ -6,11 +6,11 @@ import FormLabel from '@mui/joy/FormLabel';
 import Button from '@mui/joy/Button';
 import Textarea from '@mui/joy/Textarea';
 
-interface ThoughtCardProps {
-    thought: string;
+interface PromptCardProps {
+    prompt: string;
 }
 
-export default function ThoughtCard({ thought }: ThoughtCardProps) {
+export default function PromptCard({ prompt }: PromptCardProps) {
   return (
     <Sheet
     sx={{
@@ -35,10 +35,10 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
     >
     <div>
         <Typography level="h4" component="h1">
-            <strong>Thoughts 💭</strong>
+            <strong>A song about...</strong>
         </Typography>
         <Typography sx={{ whiteSpace: 'pre-wrap' }}>
-            {thought}
+            {prompt}
         </Typography>
     </div>
     </Sheet> 
