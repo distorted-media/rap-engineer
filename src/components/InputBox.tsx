@@ -7,8 +7,13 @@ import FormLabel from '@mui/joy/FormLabel';
 import Button from '@mui/joy/Button';
 import Textarea from '@mui/joy/Textarea';
 
-export default function InputBox({ onGenerate, onChange }) {
-  const handleChange = (event) => {
+interface InputBoxProps {
+    onGenerate: () => void;
+    onChange: (value: string) => void;
+  }
+
+export default function InputBox({ onGenerate, onChange }: InputBoxProps) {
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     onChange(event.target.value);
   };
 

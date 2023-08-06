@@ -6,7 +6,11 @@ import FormLabel from '@mui/joy/FormLabel';
 import Button from '@mui/joy/Button';
 import Textarea from '@mui/joy/Textarea';
 
-export default function ThoughtCard(props) {
+interface ThoughtCardProps {
+    thought: string;
+}
+
+export default function ThoughtCard({ thought }: ThoughtCardProps) {
   return (
     <Sheet
     sx={{
@@ -27,8 +31,8 @@ export default function ThoughtCard(props) {
         <Typography level="h4" component="h1">
             <strong>Thoughts 💭</strong>
         </Typography>
-        <Typography>
-            {props.thought}
+        <Typography component="pre">
+            {thought}
         </Typography>
     </div>
     </Sheet> 
