@@ -31,7 +31,7 @@ export default function LyricsCard({ lyrics }: LyricsCardProps) {
         <Typography level="h4" component="h1">
             <strong>Lyrics 🎙️</strong>
         </Typography>
-        <Typography component="pre">
+        <Typography sx={{ whiteSpace: 'pre-wrap' }}>
             {lyrics}
         </Typography>
     </div>

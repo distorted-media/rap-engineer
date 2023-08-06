@@ -31,7 +31,7 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
         <Typography level="h4" component="h1">
             <strong>Thoughts 💭</strong>
         </Typography>
-        <Typography component="pre">
+        <Typography sx={{ whiteSpace: 'pre-wrap' }}>
             {thought}
         </Typography>
     </div>
