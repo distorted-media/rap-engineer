@@ -14,16 +14,22 @@ export default function LyricsCard({ lyrics }: LyricsCardProps) {
   return (
     <Sheet
     sx={{
-        width: 900,
+        width: '90%', // Use relative unit
+        maxWidth: '900px', // Limit the maximum width
         mx: 'auto',
         my: 4,
-        py: 3,
-        px: 2,
+        py: 1, // Reduce padding
+        px: 1, // Reduce padding
         display: 'flex',
         flexDirection: 'column',
         gap: 2,
         borderRadius: 'sm',
         boxShadow: 'md',
+        '@media (max-width:600px)': { // Adjust layout for small screens
+            width: '100%',
+            py: 0.5,
+            px: 0.5,
+        }
     }}
     variant="outlined"
     >
