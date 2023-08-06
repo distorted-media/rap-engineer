@@ -1,17 +1,33 @@
-import * as React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Sheet from '@mui/joy/Sheet';
-import Typography from '@mui/joy/Typography';
-import FormControl from '@mui/joy/FormControl';
-import FormLabel from '@mui/joy/FormLabel';
-import Input from '@mui/joy/Input';
-import Button from '@mui/joy/Button';
-import Link from '@mui/joy/Link';
+const { Configuration, OpenAIApi } = require("openai");
 
 import InputBox from '@/components/InputBox';
 import ThoughtCard from '@/components/ThoughtCard';
 import LyricsCard from '@/components/LyricsCard';
 
+const configuration = new Configuration({
+  apiKey: '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',
+});
+const openai = new OpenAIApi(configuration);
+
+
 export default function Home() {
+  const [inputValue, setInputValue] = useState('');
+  const [thought, setThought] = useState('');
+  const [showInputBox, setShowInputBox] = useState(true);
+
+  const handleGenerate = async () => {
+    setShowInputBox(false);
+    const response = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [{role: "user", content: "Hello world"}],
+    });
+    console.log(response.data.choices[0].message.content);
+    setThought(response.data.choices[0].message.content);
+  };
+
   return (
     <Sheet
       sx={{
@@ -22,8 +38,8 @@ export default function Home() {
         minHeight: '100vh',
       }}
     >
-      <InputBox/>
-      <ThoughtCard thought="This is a thought"/>
+      {showInputBox && <InputBox onGenerate={handleGenerate} onChange={setInputValue} />}
+      {!showInputBox && <ThoughtCard thought={thought} />}
       <LyricsCard lyrics="This is a lyric"/>
     </Sheet>
   );

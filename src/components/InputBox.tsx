@@ -1,3 +1,4 @@
+`use client`
 import * as React from 'react';
 import Sheet from '@mui/joy/Sheet';
 import Typography from '@mui/joy/Typography';
@@ -6,10 +7,14 @@ import FormLabel from '@mui/joy/FormLabel';
 import Button from '@mui/joy/Button';
 import Textarea from '@mui/joy/Textarea';
 
-export default function InputBox() {
+export default function InputBox({ onGenerate, onChange }) {
+  const handleChange = (event) => {
+    onChange(event.target.value);
+  };
+
   return (
     <Sheet
-    sx={{
+      sx={{
         width: 300,
         mx: 'auto',
         my: 4,
@@ -20,24 +25,25 @@ export default function InputBox() {
         gap: 2,
         borderRadius: 'sm',
         boxShadow: 'md',
-    }}
-    variant="outlined"
+      }}
+      variant="outlined"
     >
-    <div>
+      <div>
         <Typography level="h4" component="h1">
-        <strong>Generate Bars 🎼</strong>
+          <strong>Generate Bars 🎼</strong>
         </Typography>
-    </div>
-    <FormControl id="email">
+      </div>
+      <FormControl id="email">
         <FormLabel>Write a song about...</FormLabel>
-            <Textarea
-                color="primary"
-                minRows={2}
-                size="lg"
-                variant="outlined"
-            />
-        </FormControl>
-    <Button sx={{ mt: 1 }}>Generate</Button>
+        <Textarea
+          color="primary"
+          minRows={2}
+          size="lg"
+          variant="outlined"
+          onChange={handleChange}
+        />
+      </FormControl>
+      <Button sx={{ mt: 1 }} onClick={onGenerate}>Generate</Button>
     </Sheet> 
   );
 }

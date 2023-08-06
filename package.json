@@ -15,6 +15,7 @@
     "@emotion/styled": "latest",
     "@mui/joy": "latest",
     "next": "13.x",
+    "openai": "^3.3.0",
     "react": "18.x",
     "react-dom": "18.x"
   },
