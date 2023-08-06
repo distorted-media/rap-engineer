@@ -14,10 +14,12 @@
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/joy": "latest",
+    "file-type": "^18.5.0",
     "next": "13.x",
     "openai": "^3.3.0",
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "latest",

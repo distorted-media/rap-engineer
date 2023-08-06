@@ -7,6 +7,10 @@ import InputBox from '@/components/InputBox';
 import ThoughtCard from '@/components/ThoughtCard';
 import LyricsCard from '@/components/LyricsCard';
 import Chip from '@/components/chip';
+import Link from '@/components/Link';
+import Audio from '@/components/Audio';
+import Deco from '@/components/Deco'
+import { Box } from '@mui/joy';
 
 const configuration = new Configuration({
   apiKey: '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',
@@ -125,6 +129,22 @@ export default function Home() {
       {showInputBox && <InputBox onGenerate={handleGenerate} onChange={setInputValue} />}
       {!showInputBox && <ThoughtCard thought={thought} />}
       {thought && <LyricsCard lyrics={lyrics}/>}
+
+      <Audio/>
+      <Link/>
+      
+
+    <Box display="flex" justifyContent="center" width="100%" margin={-2}>
+      <Deco lyrics='"For I am the queenbee always, Brutally, Softly Vogue bout Hip HOP! in my gauge"'/>
+      <Deco lyrics='"Yo, this ain’t a comedy, aint no Shakespeare delight, This the harsh life, it aint black n white"'/>
+      <Deco lyrics='"Yeah, E40 in the streets, hyping SF pride, keeping alive the beat, City by the bay with its own suite"'/>
+      <Deco lyrics='"LLL, echoing heartbeat, laying stethoscope track, A thousand dollar speeches selling across the rack"'/>
+    </Box>
+      
+
+
+      
+
     </Sheet>
   );
 }
