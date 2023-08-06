@@ -122,7 +122,7 @@ export default function Home() {
     >
       {showInputBox && <InputBox onGenerate={handleGenerate} onChange={setInputValue} />}
       {!showInputBox && <ThoughtCard thought={thought} />}
-      {lyrics && <LyricsCard lyrics={lyrics}/>}
+      {thought && <LyricsCard lyrics={lyrics}/>}
     </Sheet>
   );
 }
