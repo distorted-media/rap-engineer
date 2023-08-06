@@ -24,7 +24,7 @@ export default function Home() {
     >
       <InputBox/>
       <ThoughtCard thought="This is a thought"/>
-      <LyricsCard />
+      <LyricsCard lyrics="This is a lyric"/>
     </Sheet>
   );
 }
