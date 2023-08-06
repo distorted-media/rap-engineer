@@ -4,16 +4,15 @@ import useSound from 'use-sound';
 import { Button } from '@mui/joy';
 
 const AudioPlayer: React.FC = () => {
-  const [play, { stop, isPlaying }] = useSound('/Demo.mp3');
+  const [play] = useSound('/Demo.mp3');
+
+  const handlePlayClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    play();
+  };
 
   return (
     <div>
-      {!isPlaying && (
-        <Button onClick={play}>Play a Beat</Button>
-      )}
-      {isPlaying && (
-        <Button onClick={stop}>Stop</Button>
-      )}
+        <Button onClick={handlePlayClick}>Play a Beat</Button>
     </div>
   );
 };

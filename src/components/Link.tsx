@@ -17,7 +17,7 @@ import Text from '@mui/joy/Chip';
 export default function MyApp() {
   return (
     <a href='https://rentry.co/woau26' style={{ textDecoration: 'none' }}>
-      <Button variant="contained" color="primary">
+<Button variant="outlined" color="primary">
         Check out an example of a prompt and an output!
       </Button>
     </a>
