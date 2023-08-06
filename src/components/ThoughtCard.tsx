@@ -14,8 +14,14 @@ export default function ThoughtCard({ thought }: ThoughtCardProps) {
   return (
     <Sheet
     sx={{
+<<<<<<< Updated upstream
         width: '90%', // Use relative unit
         maxWidth: '900px', // Limit the maximum width
+=======
+        color: 'white',
+        
+        width: 900,
+>>>>>>> Stashed changes
         mx: 'auto',
         my: 4,
         py: 1, // Reduce padding

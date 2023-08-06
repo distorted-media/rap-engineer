@@ -6,6 +6,7 @@ const { Configuration, OpenAIApi } = require("openai");
 import InputBox from '@/components/InputBox';
 import ThoughtCard from '@/components/ThoughtCard';
 import LyricsCard from '@/components/LyricsCard';
+import Chip from '@/components/chip';
 
 const configuration = new Configuration({
   apiKey: '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',
@@ -120,6 +121,7 @@ export default function Home() {
         minHeight: '100vh',
       }}
     >
+      <Chip/>
       {showInputBox && <InputBox onGenerate={handleGenerate} onChange={setInputValue} />}
       {!showInputBox && <ThoughtCard thought={thought} />}
       {thought && <LyricsCard lyrics={lyrics}/>}
