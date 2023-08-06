@@ -22,7 +22,7 @@ export default function Home() {
     setShowInputBox(false);
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages: [{role: "user", content: "Hello world"}],
+      messages: [{role: "user", content: inputValue}], // use inputValue here
     });
     console.log(response.data.choices[0].message.content);
     setThought(response.data.choices[0].message.content);
