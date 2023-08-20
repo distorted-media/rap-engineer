@@ -4,6 +4,8 @@ OutsideLLMs hackathon project. Uses Tree of Thought (ToT) LLM prompting to illic
 
 [LLM Prompt used](https://rentry.co/7hwb9)
 
+**Note: OpenAI api key has been revoked**
+
 Using [Joy UI Component Libray](https://mui.com/joy-ui/getting-started/)
 
 Install dependencies and run:
