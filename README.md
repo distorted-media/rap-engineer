@@ -1,5 +1,9 @@
 # Rap Engineer
 
+OutsideLLMs hackathon project. Uses Tree of Thought (ToT) LLM prompting to illicit more createive rap lyrics.
+
+[Prompt used](https://rentry.co/7hwb9)
+
 Using [Joy UI Component Libray](https://mui.com/joy-ui/getting-started/)
 
 Install dependencies and run:
